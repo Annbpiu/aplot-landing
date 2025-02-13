@@ -1,6 +1,8 @@
 import './App.scss'
 import { Header } from './components/Header'
 import Main from "./components/Main.tsx";
+import AboutCompany from "./components/AboutCompany.tsx";
+import NewStyle from "./components/NewStyle.tsx";
 
 function App() {
 
@@ -9,7 +11,8 @@ function App() {
       <Header />
         <div className="h-full">
             <Main />
-
+            <AboutCompany />
+            <NewStyle />
         </div>
     </>
   )
