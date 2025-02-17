@@ -114,7 +114,6 @@ export default function App() {
                                 <img
                                     src={image}
                                     alt={`Slide ${index + 1}`}
-                                    loading="lazy"
                                     className="p-0 lg:px-3 max-w-[290px] max-h-[290px] object-cover"
                                 />
                             </div>

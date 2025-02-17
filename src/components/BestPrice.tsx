@@ -1,7 +1,7 @@
 export const BestPrice = () => {
     return (
         <div
-            className="flex flex-col h-[70%] lg:h-screen mt-14 lg:flex-row-reverse items-center lg:items-stretch justify-between space-x-4 lg:space-x-0 mg:pt-10 relative"
+            className="flex flex-col h-screen mt-14 lg:flex-row-reverse items-center lg:items-stretch justify-between space-x-4 lg:space-x-0 mg:pt-10 relative"
             style={{
                 backgroundImage: 'url(./Aplot.png)',
                 backgroundSize: 'cover',
@@ -12,7 +12,7 @@ export const BestPrice = () => {
             {/* Додаємо градієнт */}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent w-full to-[#1D1D1B] opacity-50"></div>
 
-            <div className="lg:w-1/2 z-10 relative pt-8 lg:mr-8 lg:mt-50 lg:pl-10">
+            <div className="lg:w-1/1 z-10 relative pt-8 lg:mr-8 lg:mt-50 lg:pl-10">
                 <h2 className="text-2xl m-auto mt-15 lg:mt-0 md:m-0 md:text-5xl text-white w-[95%] md:w-150 font-bold uppercase p-3 text-center bg-[#E50046]">
                     Найвигідніші ціни
                 </h2>
