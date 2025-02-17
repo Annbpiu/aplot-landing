@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const NewStyle = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const images = ["/IMG_1528.png", "/IMG_1521.png", "/IMG_1531.png"];
+    const images = ["./IMG_1528.png", "./IMG_1521.png", "./IMG_1531.png"];
     const imageWidth = 200;
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export const NewStyle = () => {
     }, []);
 
     return (
-        <div className="h-[80vh] md:h-screen mt-15 md:flex md:flex-row w-full bg-cover bg-no-repeat md:bg-none overflow-hidden" style={{ backgroundImage: 'url(/Isolation_doors.svg)' }}>
+        <div className="h-[80vh] md:h-screen mt-15 md:flex md:flex-row w-full bg-cover bg-no-repeat md:bg-none overflow-hidden" style={{ backgroundImage: 'url(./Isolation_doors.svg)' }}>
             {/* Контейнер для тексту та слайдеру */}
                 <div className="text-center md:mt-20 md:ml-40 md:text-left">
                     <h2 className="text-2xl m-auto md:m-0 md:text-5xl text-white w-[95%] md:w-130 font-bold uppercase p-3 text-center bg-[#E50046]">

@@ -2,13 +2,13 @@ export const Combination = () => {
     return (
         <div className="h-screen relative mt-5">
             <div className=" absolute top-0 left-0 right-0 bottom-0 blur-sm md:hidden"
-                 style={{backgroundImage: 'url(/Group46.png)', backgroundSize: 'cover'}}>
+                 style={{backgroundImage: 'url(./Group46.png)', backgroundSize: 'cover'}}>
             </div>
 
             <div
                 className="absolute top-0 left-0 right-0 bottom-0 hidden md:block"
                 style={{
-                    backgroundImage: 'url(/Group46.png)',
+                    backgroundImage: 'url(./Group46.png)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
@@ -29,7 +29,7 @@ export const Combination = () => {
             </div>
 
             <div className="absolute z-10 bottom-0 md:hidden">
-                <img src="/Group46.png" alt="photo" className=""/>
+                <img src="./Group46.png" alt="photo" className=""/>
             </div>
         </div>
     );

@@ -7,27 +7,27 @@ export const AboutCompany = () => {
                 </h2>
                 <ul className="list-none space-y-2 text-lg">
                     <li className="flex items-center">
-                        <img src="/Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
+                        <img src="./Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
                         21 рік на ринку України та Європи
                     </li>
                     <li className="flex items-center">
-                        <img src="/Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
+                        <img src="./Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
                         Площа виробництва 5 500 м²
                     </li>
                     <li className="flex items-center">
-                        <img src="/Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
+                        <img src="./Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
                         Виробляємо 400+ дверей на добу
                     </li>
                     <li className="flex items-center">
-                        <img src="/Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
+                        <img src="./Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
                         Найсучасніше обладнання в Україні
                     </li>
                     <li className="flex items-center">
-                        <img src="/Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
+                        <img src="./Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
                         Європейські матеріали
                     </li>
                     <li className="flex items-start pt-2">
-                        <img src="/Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
+                        <img src="./Polygon.svg" alt="li_element" className="w-4 h-4 mr-2 lg:text-4xl text-[#1D1D1B]" />
                         Двері Aplot продаються в 21 країні світу, в тому числі в США та Європі
                     </li>
                 </ul>
@@ -37,11 +37,11 @@ export const AboutCompany = () => {
                 <div className="absolute top-[-10px] left-0 w-full h-1/5 bg-gradient-to-b from-white via-white/90 to-transparent pointer-events-none lg:hidden"></div>
                 <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white via-white/80 to-transparent pointer-events-none hidden lg:block"></div>
 
-                <img src="/6L5A7768.png" alt="doors"
+                <img src="./6L5A7768.png" alt="doors"
                      className="w-full max-w-lg max-w-none p-auto h-full object-cover"
                 />
             </div>
         </div>
     );
 };
-export default AboutCompany;
+export default AboutCompany

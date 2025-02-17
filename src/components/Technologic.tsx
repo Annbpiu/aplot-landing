@@ -12,8 +12,8 @@ export const Technologic = () => {
                 </div>
 
                 <div className="flex flex-col md:flex-row md:mt-30 gap-5">
-                    <img src="/Rectangle114.png" alt="#" className="md:w-full md:h-full"/>
-                    <img src="/Rectangle199.png" alt="#" className="md:w-full md:h-full"/>
+                    <img src="./Rectangle114.png" alt="#" className="md:w-full md:h-full"/>
+                    <img src="./Rectangle199.png" alt="#" className="md:w-full md:h-full"/>
                 </div>
             </div>
         </div>

@@ -8,6 +8,10 @@ import Textur from "./components/Textur.tsx";
 import Combination from "./components/Combination.tsx";
 import Technologic from "./components/Technologic.tsx";
 import Action from "./components/Action.tsx";
+import ActionsSlider from "./components/ActionsSlider.tsx";
+import Price from "./components/Price.tsx";
+import BestPrice from "./components/BestPrice.tsx";
+import {ComplectationDoors} from "./components/ComplectationDoors.tsx";
 
 function App() {
 
@@ -23,6 +27,10 @@ function App() {
             <Combination />
             <Technologic />
             <Action />
+            <ActionsSlider />
+            <Price />
+            <BestPrice />
+            <ComplectationDoors />
         </div>
     </>
   )

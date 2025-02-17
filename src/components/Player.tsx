@@ -32,7 +32,7 @@ const Player = () => {
             />
 
             {/* Контролери */}
-            <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex items-center gap-6 w-full max-w-md">
+            <div className="absolute hidden md:hidden lg:bottom-5 left-1/2 transform -translate-x-1/2 flex items-center gap-6 w-full max-w-md">
                 {/* Кнопка Play/Pause */}
                 {playing ? (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={togglePlay}>

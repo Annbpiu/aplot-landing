@@ -4,22 +4,22 @@ export const Main = () => {
             <div id="svg" className="flex items-start justify-between absolute inset-0 z-0">
                 <div className="flex relative items-center">
                     <div className="flex md:mb-155">
-                        <img src="/Isolation_Mode_small.svg" alt="vector"/>
+                        <img src="./Isolation_Mode_small.svg" alt="vector"/>
                     </div>
                     <div className="flex">
-                        <img src="/Isolation_Mode_medium.svg" alt="vector"/>
+                        <img src="./Isolation_Mode_medium.svg" alt="vector"/>
                     </div>
                 </div>
 
                 <div className="flex relative">
-                    <img src="/Isolation_Mode.svg" alt="vector"/>
+                    <img src="./Isolation_Mode.svg" alt="vector"/>
                 </div>
             </div>
 
             <div id="door" className="flex md:justify-center relative z-10">
                 <div className="ml-5 md:mr-6 group">
                     <img
-                        src="/IMG_1523.png"
+                        src="./IMG_1523.png"
                         alt="Door"
                         className="transition-all duration-300 ease-in-out transform group-hover:shadow-[0px_4px_15px_4px_rgba(229,0,70,0.7)] group-hover:scale-105"
                     />
@@ -27,7 +27,7 @@ export const Main = () => {
 
                 <div className="group">
                     <img
-                        src="/НФ-00001424_1.png"
+                        src="./НФ-00001424_1.png"
                         alt="Door"
                         className="transition-all duration-300 ease-in-out transform group-hover:shadow-[0px_4px_15px_4px_rgba(229,0,70,0.7)] group-hover:scale-105"
                     />

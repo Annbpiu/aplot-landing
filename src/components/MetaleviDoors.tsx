@@ -2,21 +2,21 @@ export const MetaleviDoors = () => {
     return (
         <div className="h-screen relative mt-5">
             <div className=" absolute top-0 left-0 right-0 bottom-0 blur-sm md:hidden"
-                 style={{backgroundImage: 'url(/greendoor.png)', backgroundSize: 'cover'}}>
+                 style={{backgroundImage: 'url(./greendoor.png)', backgroundSize: 'cover'}}>
             </div>
 
             <div
                 className="absolute top-0 left-0 right-0 bottom-0 hidden md:block"
                 style={{
-                    backgroundImage: 'url(/greendoor.png)',
-                    backgroundSize: 'cover',
+                    backgroundImage: 'url(./greendoor.png)',
+                    backgroundSize: 'contain',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
                 }}
             >
             </div>
 
-            <div className="bg-black/60 m-4 absolute md:pl-10 md:h-150 md:ml-20 md:mt-40 md:w-180">
+            <div className="bg-black/60 m-4 absolute lg:ml-100 md:pl-10 md:h-150 md:ml-20 md:mt-40 md:w-180">
                 {/* Лінія зліва */}
                 <div className="absolute left-0 top-0 bottom-0 w-2 md:w-5  bg-[#E50046]"></div>
 
@@ -39,9 +39,9 @@ export const MetaleviDoors = () => {
                 </div>
             </div>
 
-            {/*<div className="absolute z-10  md:hidden">*/}
-            {/*    <img src="/greendoor.png" alt="photo" className=""/>*/}
-            {/*</div>*/}
+            <div className="absolute z-10 bottom-0 h-[23%] md:hidden">
+                <img src="./greendoor.png" alt="photo" className=""/>
+            </div>
         </div>
     );
 };
