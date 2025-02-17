@@ -1,16 +1,16 @@
-import { useRef, useState } from "react";
 import ReactPlayer from "react-player";
+import { useRef, useState } from "react";
 
 const Player = () => {
-    const playerRef = useRef<ReactPlayer>(null);
+    const playerRef = useRef(null); // Видалено тип ReactPlayer
     const [playing, setPlaying] = useState(true);
+    const [muted, setMuted] = useState(true);
     const [progress, setProgress] = useState(0);
     const [duration, setDuration] = useState(0);
 
-    // Перемикання Play/Pause
     const togglePlay = () => setPlaying(!playing);
+    const toggleMute = () => setMuted(!muted);
 
-    // Оновлення прогресу
     const handleProgress = (state: { playedSeconds: number }) => {
         setProgress(state.playedSeconds);
     };
@@ -23,28 +23,37 @@ const Player = () => {
                 url="https://www.youtube.com/watch?v=OsdXs_dO9-8&t=1660s"
                 playing={playing}
                 loop
-                muted
+                muted={muted}
                 width="100%"
                 height="100%"
                 onProgress={handleProgress}
                 onDuration={setDuration}
                 className="absolute top-0 left-0 w-full h-full"
+                style={{ pointerEvents: "none" }}
             />
 
             {/* Контролери */}
-            <div className="absolute hidden md:hidden lg:bottom-5 left-1/2 transform -translate-x-1/2 flex items-center gap-6 w-full max-w-md">
-                {/* Кнопка Play/Pause */}
+            <div className="absolute bottom-45 lg:bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-6 w-full max-w-md">
                 {playing ? (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={togglePlay}>
                         <path d="M19 19H5V5h14v14z" />
-                    </svg>  // Кнопка Pause
+                    </svg>
                 ) : (
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={togglePlay}>
                         <path d="M8 5v14l11-7z" />
-                    </svg>  // Кнопка Play
+                    </svg>
                 )}
 
-                {/* Прогрес-бар */}
+                {muted ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={toggleMute}>
+                        <path d="M12 3v18l-6-6h-3v-6h3l6-6z" />
+                    </svg>
+                ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={toggleMute}>
+                        <path d="M16.5 12l-6 6v-12l6 6z" />
+                    </svg>
+                )}
+
                 <div className="relative w-full h-2 bg-gray-300">
                     <div
                         className="absolute top-0 left-0 h-full bg-[#E50046]"
