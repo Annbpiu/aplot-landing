@@ -1,7 +1,10 @@
+// import BurgerMenu from "./BurgetMenu.tsx";
+
 export const NavMenu = () => {
     return (
         <div className="flex justify-center w-full">
-            <nav className="md:w-[80%] w-full max-w-[1200px] h-[50px] md:h-[78px] bg-black/60 backdrop-blur-sm shadow-lg p-6 flex justify-between items-center">
+            <nav
+                className="md:w-[80%] w-full max-w-[1200px] h-[50px] md:h-[78px] bg-black/60 backdrop-blur-sm shadow-lg p-6 flex justify-between items-center">
                 {/* Логотипи */}
                 <div className="flex items-center md:gap-4">
                     <img src="./door_logo.svg" alt="Logo" className="w-10 h-10"/>
@@ -27,6 +30,8 @@ export const NavMenu = () => {
                     <span className="text-sm font-medium">+38 (050) 375 55 31</span>
                     <span className="text-xs text-gray-300">пн-пт 09:00 - 17:00</span>
                 </div>
+
+                {/*<BurgerMenu />*/}
             </nav>
         </div>
     );
