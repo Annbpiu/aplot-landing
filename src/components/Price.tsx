@@ -16,8 +16,8 @@ export const Price = () => {
             >
             </div>
 
-            <div className="bg-black/60 m-4 absolute md:pl-10 md:h-150 md:ml-20 md:mt-40 md:w-180">
-                <div className="h-full p-10 relative z-10 text-white">
+            <div className="bg-black/60 m-4 absolute p-2 md:pl-10 md:h-150 md:ml-20 md:mt-40 md:w-180">
+                <div className="h-full p-2 md:p-10 relative z-10 text-white">
                     <h1 className="font-bold md:text-3xl break-words">
                         Двері в квартиру від виробника
                     </h1>

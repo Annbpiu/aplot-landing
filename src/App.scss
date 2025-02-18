@@ -13,6 +13,36 @@ $BORDER_COLOR : #1D1D1B;
   height: 100%;
 }
 
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%); /* Початкова позиція за межами екрана */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Кінець — в нормальну позицію */
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%); /* Початкова позиція за межами екрана */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Кінець — в нормальну позицію */
+    opacity: 1;
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 1.5s ease-in-out forwards; /* Задаємо анімацію */
+}
+
+.slide-in-left {
+  animation: slideInLeft 1.5s ease-in-out forwards; /* Задаємо анімацію */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

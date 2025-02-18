@@ -12,13 +12,19 @@ import ActionsSlider from "./components/ActionsSlider.tsx";
 import Price from "./components/Price.tsx";
 import BestPrice from "./components/BestPrice.tsx";
 import {ComplectationDoors} from "./components/ComplectationDoors.tsx";
+import World from "./components/World.tsx";
+import Logistic from "./components/Logistic.tsx";
+import Safety from "./components/Safety.tsx";
+import WelcomeTo from "./components/WelcomeTo.tsx";
+import YouTubePlayer from "./components/YouTubePlayer.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
 
   return (
     <>
       <Header />
-        <div className="h-full">
+        <main className="h-full">
             <Main />
             <AboutCompany />
             <NewStyle />
@@ -31,7 +37,13 @@ function App() {
             <Price />
             <BestPrice />
             <ComplectationDoors />
-        </div>
+            <World />
+            <Logistic />
+            <Safety />
+            <WelcomeTo />
+            <YouTubePlayer />
+            <Footer />
+        </main>
     </>
   )
 }
