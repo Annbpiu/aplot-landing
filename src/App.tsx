@@ -22,7 +22,7 @@ import Footer from "./components/Footer.tsx";
 function App() {
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Header />
         <main className="h-full">
             <Main />
@@ -44,7 +44,7 @@ function App() {
             <YouTubePlayer />
             <Footer />
         </main>
-    </>
+    </div>
   )
 }
 
