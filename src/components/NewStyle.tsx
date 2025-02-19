@@ -48,6 +48,7 @@ export const NewStyle = () => {
                             }`}
                             style={{
                                 left: `${index * (imageWidth + (window.innerWidth >= 768 ? 70 : 10) - 95)}px`, // Змінюємо spacing тут теж
+                                maxHeight: "450px"
                             }}
                             onMouseEnter={() => setActiveIndex(index)}
                         />
