@@ -20,12 +20,12 @@ export const Action = () => {
     }, []);
 
     return (
-        <div className="h-screen relative" style={{
+        <div className="min-h-screen relative flex flex-col items-center lg:items-start gap-20" style={{
             backgroundImage: 'url(./Decor_4.png), url(./Decor_1.png)',
             backgroundPosition: 'bottom right, top left',
             backgroundRepeat: 'no-repeat'
         }}>
-            <div className="bg-black/50 m-4 mt-10 absolute md:h-50 md:ml-20 md:mt-60 md:w-180">
+            <div className="bg-black/50 m-4 mt-10 relative md:h-50 md:ml-20 md:mt-60 md:w-180">
                 <div className="h-full p-10 relative z-10 text-white">
                     <div className="font-light text-center md:text-xl  break-words">
                         Вся продукція заводу <span className="font-bold">«Aplot» сертифікована</span> і ми як виробник
@@ -39,7 +39,7 @@ export const Action = () => {
             <ActionCarousel/>
 
             <div
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2 w-80 h-100 flex flex-col items-center justify-center lg:hidden">
+                className="relative m-auto h-full mb-20 w-80 h-100 flex flex-col items-center justify-center lg:hidden">
                 <motion.img
                     key={currentDiploma}
                     src={diplomas[currentDiploma]}

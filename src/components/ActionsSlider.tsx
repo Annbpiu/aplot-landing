@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {useState, useEffect} from "react";
 
 function SampleNextArrow(props) {
     const { style, onClick } = props;
@@ -56,11 +57,31 @@ function SamplePrevArrow(props) {
 }
 
 export default function App() {
+    const [loaded, setLoaded] = useState(false);
     const images = [
         "./J00A0662.webp", "./J00A0694.webp", "./J00A0708.webp", "./J00A0715.webp",
         "./J00A0717.webp", "./J00A0719.webp", "./J00A0734.webp", "./J00A0745.webp",
         "./J00A0761.webp", "./J00A0773.webp", "./J00A0780.webp"
     ];
+
+
+    useEffect(() => {
+        const loadImages = async () => {
+            await Promise.all(
+                images.map((src) => {
+                    return new Promise((resolve) => {
+                        const img = new Image();
+                        img.src = src;
+                        img.onload = resolve;
+                        img.onerror = resolve; // Якщо картинка не завантажиться, просто ігноруємо
+                    });
+                })
+            );
+            setLoaded(true);
+        };
+
+        loadImages();
+    }, []);
 
     const settings = {
         dots: false,
@@ -69,7 +90,7 @@ export default function App() {
         slidesToShow: 5,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         cssEase: "linear",
         pauseOnHover: true,
         prevArrow: <SamplePrevArrow />,
@@ -108,18 +129,22 @@ export default function App() {
 
             <div className="w-full m-auto">
                 <div className="slider-container relative">
-                    <Slider {...settings} className="m-auto mt-5 md:mt-0 w-[80%] relative z-10">
-                        {images.map((image, index) => (
-                            <div key={index}>
-                                <img
-                                    src={image}
-                                    alt={`Slide ${index + 1}`}
-                                    loading="lazy"
-                                    className="p-0 lg:px-3 max-w-[290px] max-h-[290px] object-cover"
-                                />
-                            </div>
-                        ))}
-                    </Slider>
+                        {!loaded ? (
+                            <div className="text-center text-white">Завантаження...</div>
+                        ) : (
+                            <Slider {...settings} className="m-auto mt-5 md:mt-0 w-[80%] relative z-10">
+                                {images.map((image, index) => (
+                                    <div key={index}>
+                                        <img
+                                            src={image}
+                                            alt={`Slide ${index + 1}`}
+                                            loading="lazy"
+                                            className="p-0 lg:px-3 max-w-[290px] max-h-[290px] object-cover"
+                                        />
+                                    </div>
+                                ))}
+                            </Slider>
+                        )}
                 </div>
             </div>
         </div>

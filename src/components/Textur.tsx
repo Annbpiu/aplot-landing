@@ -1,12 +1,12 @@
 export const Textur = () => {
     return (
-        <div className="h-screen" style={{backgroundImage: 'url(./Decor_2.png)', backgroundSize: 'cover'}}>
+        <div className="min-h-screen pt-10" style={{backgroundImage: 'url(./Decor_2.png)', backgroundSize: 'cover'}}>
             <div
-                className="bg-white/20 backdrop-blur-none text-center h-[80px] md:w-[80%] z-10 flex items-center justify-center relative top-1/5 left-1/2 transform -translate-x-1/2 md:-translate-y-1/1">
+                className="bg-white/20 backdrop-blur-none text-center h-[80px] md:w-[80%] z-10 flex items-center justify-center relative top-1/5 left-1/2 transform -translate-x-1/2 md:-translate-y-1/5">
                 <h2 className="text-white break-words text-2xl md:text-4xl font-bold">Різноманіття текстур</h2>
             </div>
 
-            <div className="grid grid-cols-2 m-auto md:w-250 gap-6 mt-60 md:mt-50 mt-12 md:grid-cols-3 p-4 md:p-10">
+            <div className="grid grid-cols-2 m-auto md:w-250 gap-6  md:mt-50 mt-12 md:grid-cols-2 lg:grid-cols-3 p-4 md:p-10">
                 {['door1.png', 'door2.png', 'door3.png', 'door4.png', 'door5.png', 'door6.png'].map((src, index) => (
                     <div
                         key={index}

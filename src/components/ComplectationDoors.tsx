@@ -39,7 +39,7 @@ export const ComplectationDoors = () => {
                 </div>
 
                 {/* Зображення дверей */}
-                <div className="lg:w-4/5 w-1/5 flex justify-end md:justify-center items-center">
+                <div className="lg:w-4/5 w-1/5 flex justify-end md:justify-center h-120 items-center">
                     {doorOptions.map((door) => (
                         <img
                             key={door.name}
@@ -55,7 +55,7 @@ export const ComplectationDoors = () => {
             </div>
 
             {/* Таблиця характеристик */}
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg px-8 lg:py-10 lg:mt-6">
+            <div className="relative overflow-x-hidden shadow-md sm:rounded-lg lg:py-10 lg:mt-6">
                 <table className="w-full text-sm text-left text-gray-500">
                     <thead className="text-xs text-gray-700 uppercase">
                     <tr>
