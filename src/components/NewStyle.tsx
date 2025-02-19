@@ -14,7 +14,7 @@ export const NewStyle = () => {
     }, []);
 
     return (
-        <div className="h-screen mt-15 flex flex-col items-center lg:flex-col w-full bg-cover bg-no-repeat md:bg-none" style={{ backgroundImage: 'url(./Isolation_doors.svg)' }}>
+        <div className="min-h-screen mt-15 flex flex-col items-center lg:flex-col w-full bg-cover bg-no-repeat md:bg-none" style={{ backgroundImage: 'url(./Isolation_doors.svg)' }}>
             {/* Контейнер для тексту та слайдеру */}
                 <div className="text-center lg:pl-40 md:text-left self-start">
                     <h2 className="text-2xl m-auto md:m-0 md:text-5xl text-white w-[95%] md:w-130 font-bold uppercase p-3 text-center bg-[#E50046]">
@@ -48,7 +48,6 @@ export const NewStyle = () => {
                             }`}
                             style={{
                                 left: `${index * (imageWidth + (window.innerWidth >= 768 ? 70 : 10) - 95)}px`, // Змінюємо spacing тут теж
-                                maxHeight: "450px"
                             }}
                             onMouseEnter={() => setActiveIndex(index)}
                         />
