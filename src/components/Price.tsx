@@ -31,7 +31,7 @@ export const Price = () => {
                     </div>
 
                     <a
-                        href="#"
+                        href="https://aplot.ua/price1111.pdf"
                         className="bg-[#E50046] text-white py-4 px-8 mt-15 text-sm md:text-2xl w-full md:w-[80%] font-bold hover:bg-[#d4003f] transition duration-300 inline-flex items-center justify-center space-x-4">
                         <img src="./Vector_price.svg" alt="price" className="w-8 h-8 md:w-10 md:h-10"/>
                         <span className="text-white uppercase font-bold text-lg md:text-3xl">прайс aplot 2025</span>

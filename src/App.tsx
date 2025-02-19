@@ -22,29 +22,29 @@ import Footer from "./components/Footer.tsx";
 function App() {
 
   return (
-    <div className="overflow-hidden">
-      <Header />
-        <main className="h-full">
-            <Main />
-            <AboutCompany />
-            <NewStyle />
-            <MetaleviDoors />
-            <Textur />
-            <Combination />
-            <Technologic />
-            <Action />
-            <ActionsSlider />
-            <Price />
-            <BestPrice />
-            <ComplectationDoors />
-            <World />
-            <Logistic />
-            <Safety />
-            <WelcomeTo />
-            <YouTubePlayer />
-            <Footer />
-        </main>
-    </div>
+        <div className="overflow-hidden">
+          <Header />
+                <main className="h-full">
+                    <Main />
+                    <AboutCompany />
+                    <NewStyle />
+                    <MetaleviDoors />
+                    <Textur />
+                    <Combination />
+                    <Technologic />
+                    <Action />
+                    <ActionsSlider />
+                    <Price />
+                    <BestPrice />
+                    <ComplectationDoors />
+                    <World />
+                    <Logistic />
+                    <Safety />
+                    <WelcomeTo />
+                    <YouTubePlayer />
+                    <Footer />
+                </main>
+        </div>
   )
 }
 

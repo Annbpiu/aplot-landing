@@ -22,6 +22,21 @@ html {
   height: 100%;
 }
 
+/* Це для зміни кольору та вигляду скролбару */
+.Scrollbar__track {
+  background: rgba(0, 0, 0, 0.1); /* фон треку */
+  border-radius: 10px;
+}
+
+.Scrollbar__thumb {
+  background: #E50046; /* колір самого скролу */
+  border-radius: 10px;
+}
+
+.Scrollbar__thumb:hover {
+  background: #d4003f; /* колір при наведенні */
+}
+
 @keyframes slideInLeft {
   0% {
     transform: translateX(-100%); /* Початкова позиція за межами екрана */

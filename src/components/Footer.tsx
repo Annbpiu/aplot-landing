@@ -15,16 +15,24 @@ export const Footer = () => {
                 <div className="flex items-baseline justify-end lg:justify-center space-x-5 md:space-x-15">
                     <div>
                         <img src="./VectorArr.svg" alt="arr"/>
-                        <img src="./Facebook_Icon.svg" alt="Facebook" className="w-27 h-27 cursor-pointer"/>
+                        <a href="https://www.facebook.com/share/1LGDbqj6Gs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                            <img src="./Facebook_Icon.svg" alt="Facebook" className="w-27 h-27 cursor-pointer"/>
+                        </a>
                     </div>
                     <div>
-                        <img src="./InstagramFoo.svg" alt="Instagram" className="w-27 h-27 cursor-pointer"/>
+                        <a href="https://www.instagram.com/aplot.ua?igsh=MXQxdTlzZmJ1YTB5ZA==" target="_blank" rel="noopener noreferrer">
+                            <img src="./InstagramFoo.svg" alt="Instagram" className="w-27 h-27 cursor-pointer"/>
+                        </a>
                     </div>
                     <div>
-                        <img src="./ViberFoo.svg" alt="Viber" className="w-27 h-27 cursor-pointer"/>
+                        <a href="https://invite.viber.com/?g2=AQBt8iWlT4sae0mOuR5cCpn%2Fp5mgTz0RrYe73ci8oa5Q9oUK4iPHcxfsKQdyrKTc" target="_blank" rel="noopener noreferrer">
+                            <img src="./ViberFoo.svg" alt="Viber" className="w-27 h-27 cursor-pointer"/>
+                        </a>
                     </div>
                     <div>
-                        <img src="./YouTubePink.svg" alt="youtube" className="w-27 h-27 cursor-pointer"/>
+                        <a href="https://youtube.com/@tmaplot?si=vkx8v4U1JZhiXwl3" target="_blank" rel="noopener noreferrer">
+                            <img src="./YouTubePink.svg" alt="youtube" className="w-27 h-27 cursor-pointer"/>
+                        </a>
                     </div>
                 </div>
             </div>

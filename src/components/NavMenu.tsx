@@ -19,11 +19,20 @@ export const NavMenu = () => {
 
                 {/* Соціальні мережі (приховуємо на малих екранах) */}
                 <div className="hidden md:flex gap-2 mt-2">
-                    <img src="./facebook.svg" alt="Facebook" className="w-10 h-10"/>
-                    <img src="./instagram.svg" alt="Instagram" className="w-10 h-10"/>
-                    <img src="./viber.svg" alt="Viber" className="w-10 h-10"/>
-                    <img src="./youtube.svg" alt="YouTube" className="w-10 h-10"/>
+                    <a href="https://www.facebook.com/share/1LGDbqj6Gs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                        <img src="./facebook.svg" alt="Facebook" className="w-10 h-10"/>
+                    </a>
+                    <a href="https://www.instagram.com/aplot.ua?igsh=MXQxdTlzZmJ1YTB5ZA==" target="_blank" rel="noopener noreferrer">
+                        <img src="./instagram.svg" alt="Instagram" className="w-10 h-10"/>
+                    </a>
+                    <a href="https://invite.viber.com/?g2=AQBt8iWlT4sae0mOuR5cCpn%2Fp5mgTz0RrYe73ci8oa5Q9oUK4iPHcxfsKQdyrKTc" target="_blank" rel="noopener noreferrer">
+                        <img src="./viber.svg" alt="Viber" className="w-10 h-10"/>
+                    </a>
+                    <a href="https://youtube.com/@tmaplot?si=vkx8v4U1JZhiXwl3" target="_blank" rel="noopener noreferrer">
+                        <img src="./youtube.svg" alt="YouTube" className="w-10 h-10"/>
+                    </a>
                 </div>
+
 
                 {/* Контакти */}
                 <div className="flex flex-col items-end text-white">
@@ -31,7 +40,7 @@ export const NavMenu = () => {
                     <span className="text-xs text-gray-300">пн-пт 09:00 - 17:00</span>
                 </div>
 
-                <BurgerMenu />
+                <BurgerMenu/>
             </nav>
         </div>
     );
