@@ -1,6 +1,6 @@
 export const MetaleviDoors = () => {
     return (
-        <div className="flex flex-col min-h-screen relative">
+        <div id="metaldoor" className="flex flex-col min-h-screen relative">
             <div className="absolute top-0 left-0 right-0 bottom-0 blur-sm md:hidden"
                  style={{backgroundImage: 'url(./greendoor.png)', backgroundSize: 'cover'}}>
             </div>

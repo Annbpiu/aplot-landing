@@ -9,6 +9,14 @@ $BORDER_COLOR : #1D1D1B;
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .slick-slide img {
   width: 100%;
   height: 100%;

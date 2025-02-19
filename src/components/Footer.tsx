@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <div>
+        <div id="youtube">
             <div className="h-full py-15 px-5 lg:px-40 lg:py-35 min-h-[70%] items-center lg:" style={{
                 backgroundImage: "url(./luxury.png)",
                 backgroundSize: "cover",

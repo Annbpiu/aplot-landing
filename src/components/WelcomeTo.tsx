@@ -1,6 +1,6 @@
 export const WelcomeTo = () => {
     return (
-        <div className="flex flex-col h-full lg:px-40 min-h-full lg:pb-10 p-5">
+        <div id="cooperation" className="flex flex-col h-full lg:px-40 min-h-full lg:pb-10 p-5">
             <h1 className="text-white !text-2xl lg:!text-5xl font-bold">Запрошуємо до співпраці</h1>
             <span
                 className="bg-[#E50046] py-2 mt-5 w-65 lg:w-100 text-center lg:text-2xl text-white">Ми пропонуємо партнерам:</span>

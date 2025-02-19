@@ -12,7 +12,7 @@ export const ComplectationDoors = () => {
     const [selectedDoor, setSelectedDoor] = useState("Gold");
 
     return (
-        <div className="h-full flex flex-col justify-between min-h-screen w-full bg-white p-8 lg:px-30">
+        <div id="DoorComplectation" className="h-full flex flex-col justify-between min-h-screen w-full bg-white p-8 lg:px-30">
             {/* Заголовок */}
             <h2 className="text-2xl md:text-5xl text-white mb-5 font-bold uppercase p-3 text-center bg-[#E50046]">
                 Комплектації дверей

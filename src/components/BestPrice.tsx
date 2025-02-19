@@ -1,6 +1,7 @@
 export const BestPrice = () => {
     return (
         <div
+            id="price"
             className="flex flex-col h-screen mt-14 lg:flex-row-reverse items-center lg:items-stretch justify-between space-x-4 lg:space-x-0 mg:pt-10 relative"
             style={{
                 backgroundImage: 'url(./Aplot.png)',

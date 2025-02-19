@@ -1,4 +1,4 @@
-// import BurgerMenu from "./BurgetMenu.tsx";
+import BurgerMenu from "./BurgetMenu.tsx";
 
 export const NavMenu = () => {
     return (
@@ -31,7 +31,7 @@ export const NavMenu = () => {
                     <span className="text-xs text-gray-300">пн-пт 09:00 - 17:00</span>
                 </div>
 
-                {/*<BurgerMenu />*/}
+                <BurgerMenu />
             </nav>
         </div>
     );

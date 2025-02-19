@@ -1,51 +1,112 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
+import { Spin as Hamburger } from 'hamburger-react'
+import { Menu, X } from "lucide-react";
 
-export const BurgerMenu = () => {
+export default function HamburgerMenu() {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth >= 1024) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.body.classList.add("overflow-hidden");
+        } else {
+            document.body.classList.remove("overflow-hidden");
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [isOpen]);
+
+    const handleLinkClick = (id) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+        setTimeout(() => setIsOpen(false), 300);
     };
+
+    const menuItems = [
+        { id: "about", label: "Про компанію" },
+        { id: "metaldoor", label: "Вхідні металеві двері" },
+        { id: "technologic", label: "Технології виробництва" },
+        { id: "diploma", label: "Сертифікати" },
+        { id: "kvartira", label: "Двері в квартиру" },
+        { id: "price", label: "Ціни" },
+        { id: "DoorComplectation", label: "Комплектації дверей" },
+        { id: "cooperation", label: "Співпраця" },
+        { id: "youtube", label: "Відеоогляди та соцмережі" },
+    ];
 
     return (
         <div className="relative">
-            {/* Навігація */}
-            <nav className="md:w-[80%] w-full max-w-[1200px] h-[50px] md:h-[78px] bg-black/60 backdrop-blur-sm shadow-lg p-6 flex justify-between items-center">
-                {/* Логотипи */}
-                <div className="flex items-center md:gap-4">
-                    <img src="./door_logo.svg" alt="Logo" className="w-10 h-10"/>
-                    <img src="./nav_logo.svg" alt="logo" className="w-20 h-20"/>
+            {/* Кнопка меню (мобільна) */}
+            <div className="p-2 !text-white ease-in-out focus:outline-none md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? <X size={30} /> : <Menu size={30} />}
+            </div>
+
+            {/* Велике меню (ідентичне мобільному) */}
+            <div className="relative">
+                {/* Кнопка меню */}
+                <div
+                    className="p-2 !text-white ease-in hidden md:block focus:outline-none"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    <Hamburger size={30} toggled={isOpen} toggle={setIsOpen} />
                 </div>
 
-                {/* Бургер меню (відображається на малих екранах) */}
-                <button onClick={toggleMenu} className="md:hidden text-white">
-                    <span className="block w-6 h-0.5 bg-white mb-1"></span>
-                    <span className="block w-6 h-0.5 bg-white mb-1"></span>
-                    <span className="block w-6 h-0.5 bg-white"></span>
-                </button>
-            </nav>
+                <div
+                    className={`fixed top-0 right-0 h-full hidden md:block min-h-150 w-100 mt-20 bg-stone-800/90 backdrop-blur-sm bg-opacity-80 z-50 flex flex-col items-end pr-5 justify-center space-y-6 ease-in-out transition-transform duration-300 lg:flex md:hidden ${
+                        isOpen ? "translate-x-0" : "translate-x-[250%]"
+                    }`}
+                    style={{transition: "ease-in-out 0.8s"}}
+                >
+                    {menuItems.map(({id, label}) => (
+                        <a
+                            key={id}
+                            onClick={() => handleLinkClick(id)}
+                            className="!text-white relative cursor-pointer hover:bg-[#E50046]/80 pt-1 w-[90%] text-xl hover:text-gray-300 uppercase border-b-[#A5A5A4]/30 pb-1 border-b border-0"
+                        >
+                            {label}
+                        </a>
+                    ))}
+                </div>
+            </div>
 
-            {/* Бічне меню */}
+            {/* Мобільне меню */}
             <div
-                className={`fixed top-0 right-0 w-3/4 h-full bg-gray-800 text-white transition-transform duration-300 ease-in-out ${isOpen ? 'transform translate-x-0' : 'transform translate-x-full'}`}
-                style={{ boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)' }}
+                className={`fixed inset-0 h-screen md:hidden bg-stone-800/90 backdrop-blur-sm z-50 flex flex-col items-end pr-5 justify-center space-y-6 ease-in transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
-                <div className="flex flex-col p-6 space-y-4">
-                    <a href="#" className="text-lg">Про компанію</a>
-                    <a href="#" className="text-lg">Вхідні металеві двері</a>
-                    <a href="#" className="text-lg">Різноманіття текстур</a>
-                    <a href="#" className="text-lg">Технологія виробництва</a>
-                    <a href="#" className="text-lg">Сертифікати</a>
-                    <a href="#" className="text-lg">Двері в квартиру</a>
-                    <a href="#" className="text-lg">Ціни</a>
-                    <a href="#" className="text-lg">Комплектації дверей</a>
-                    <a href="#" className="text-lg">Співпраця</a>
-                    <a href="#" className="text-lg">Відеоогляди</a>
-                    <a href="#" className="text-lg">Мережі</a>
+                <div className="absolute bg-[#E50046] font-bold top-2 right-7 text-white"
+                     onClick={() => setIsOpen(false)}>
+                    <X size={30}/>
+                </div>
+                {menuItems.map(({id, label}) => (
+                    <a key={id} onClick={() => handleLinkClick(id)}
+                       className="!text-white text-xl hover:text-gray-300 uppercase border-b-[#A5A5A4]/30 pb-1 border-b-1 border-0 w-[90%]">
+                        {label}
+                    </a>
+                ))}
+                <div className="flex flex-col gap-1">
+                    <div className="flex flex-col items-end">
+                        <span className="text-white font-bold text-sm lg:text-2xl">+38 (050) 375 55 31</span>
+                        <span className="text-white text-xs lg:text-base">пн-пт 09:00 - 17:00</span>
+                    </div>
+                    <div className="flex gap-5 justify-center items-center">
+                        <img src="./InstagramS.svg" alt="ins" />
+                        <img src="./FacebookSmall.svg" alt="fc" />
+                        <img src="./ViberSmall.svg" alt="viber" />
+                        <img src="./youtubeS.svg" alt="youtube" />
+                    </div>
                 </div>
             </div>
         </div>
     );
-};
-
-export default BurgerMenu;
+}
