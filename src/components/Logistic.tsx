@@ -59,7 +59,7 @@ export const Logistic = () => {
                 <ScrollAnimation
                     animateIn="slide-in-right"
                     animateOnce={true}
-                    delay={500}
+                    delay={200}
                     duration={1}
                 >
                     <div className="flex relative justify-end mt-10 z-0">

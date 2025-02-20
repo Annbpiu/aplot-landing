@@ -5,7 +5,7 @@ export const World = () => {
         <ScrollAnimation
             animateIn="slide-in-left"
             animateOnce={true}
-            delay={500}
+            delay={200}
             duration={1}
         >
             <div

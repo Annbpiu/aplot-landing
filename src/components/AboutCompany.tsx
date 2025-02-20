@@ -1,7 +1,7 @@
 export const AboutCompany = () => {
     return (
         <div id="about" className="bg-white flex flex-col lg:flex-row items-center lg:items-stretch justify-between space-x-4 mg:pt-10 relative">
-            <div className="lg:w-1/2 z-10 relative px-5 lg:m-auto">
+            <div className="lg:w-1/2 z-10 lg:pl-25 relative px-5 lg:m-auto">
                 <h2 className="text-2xl text-[#1D1D1B] pt-6 font-bold mb-6 lg:text-5xl text-center lg:text-start">
                     Компанія <span className="bg-[#E50046] px-2 lg:text-5xl text-white">Aplot</span> - це
                 </h2>

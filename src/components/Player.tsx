@@ -42,6 +42,8 @@ const Player = () => {
 
                         <a
                             href="https://aplot.ua/price1111.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="bg-[#E50046] text-white py-4 px-8 mt-2 md:mt-15 text-sm md:text-2xl w-full md:w-[80%] font-bold hover:bg-[#d4003f] transition duration-300 inline-flex items-center justify-center space-x-4">
                             <span className="text-white uppercase font-bold text-lg md:text-3xl">Асортимент</span>
                         </a>
@@ -49,7 +51,7 @@ const Player = () => {
                 </div>
 
                 {/* Відео */}
-                <div className="absolute top-0 left-0 w-full h-full z-10 md:pointer-events-auto" onClick={togglePlay}>
+                <div className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none md:pointer-events-auto" onClick={togglePlay}>
                     <ReactPlayer
                         ref={playerRef}
                         url="https://www.youtube.com/watch?v=OsdXs_dO9-8&t=1660s"
