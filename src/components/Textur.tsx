@@ -75,7 +75,7 @@ export const Textur = () => {
                         <img
                             src={lightboxImage}
                             alt="Lightbox"
-                            className="max-w-full max-h-full object-contain"
+                            className="max-w-[60%] max-h-[60%] m-auto lg:max-h-full lg:max-w-full object-contain"
                         />
                     </div>
                 </div>
