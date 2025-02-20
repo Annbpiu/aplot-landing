@@ -48,8 +48,9 @@ export default function HamburgerMenu() {
     return (
         <div className="relative">
             {/* Кнопка меню (мобільна) */}
-            <div className="p-2 !text-white ease-in-out focus:outline-none md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <X size={30} /> : <Menu size={30} />}
+            <div className="p-2 !text-white ease-in-out focus:outline-none md:hidden"
+                 onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? <X size={30}/> : <Menu size={30}/>}
             </div>
 
             {/* Велике меню (ідентичне мобільному) */}
@@ -59,14 +60,13 @@ export default function HamburgerMenu() {
                     className="p-2 !text-white ease-in hidden md:block focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    <Hamburger size={30} toggled={isOpen} toggle={setIsOpen} />
+                    <Hamburger size={30} toggled={isOpen} toggle={setIsOpen}/>
                 </div>
 
+                {/* Меню */}
                 <div
-                    className={`fixed top-0 right-0 h-full hidden md:block min-h-150 w-100 mt-20 bg-stone-800/90 backdrop-blur-sm bg-opacity-80 z-50 flex flex-col items-end pr-5 justify-center space-y-6 ease-in-out transition-transform duration-300 lg:flex md:hidden ${
-                        isOpen ? "translate-x-0" : "translate-x-[250%]"
-                    }`}
-                    style={{transition: "ease-in-out 0.8s"}}
+                    className={`fixed top-0 right-0 h-full hidden md:block min-h-150 w-100 mt-20 bg-black/60 backdrop-blur-md shadow-lg bg-opacity-80 z-50 flex flex-col items-end pr-5 justify-center space-y-6 transition-all duration-500 ease-out lg:flex md:hidden
+        ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
                 >
                     {menuItems.map(({id, label}) => (
                         <a
@@ -79,6 +79,7 @@ export default function HamburgerMenu() {
                     ))}
                 </div>
             </div>
+
 
             {/* Мобільне меню */}
             <div
@@ -100,10 +101,22 @@ export default function HamburgerMenu() {
                         <span className="text-white text-xs lg:text-base">пн-пт 09:00 - 17:00</span>
                     </div>
                     <div className="flex gap-5 justify-center items-center">
-                        <img src="./InstagramS.svg" alt="ins" />
-                        <img src="./FacebookSmall.svg" alt="fc" />
-                        <img src="./ViberSmall.svg" alt="viber" />
-                        <img src="./youtubeS.svg" alt="youtube" />
+                        <a href="https://www.instagram.com/aplot.ua?igsh=MXQxdTlzZmJ1YTB5ZA==" target="_blank"
+                           rel="noopener noreferrer">
+                            <img src="./InstagramS.svg" alt="ins"/>
+                        </a>
+                        <a href="https://www.facebook.com/share/1LGDbqj6Gs/?mibextid=wwXIfr" target="_blank"
+                           rel="noopener noreferrer">
+                            <img src="./FacebookSmall.svg" alt="fc"/>
+                        </a>
+                        <a href="https://invite.viber.com/?g2=AQBt8iWlT4sae0mOuR5cCpn%2Fp5mgTz0RrYe73ci8oa5Q9oUK4iPHcxfsKQdyrKTc"
+                           target="_blank" rel="noopener noreferrer">
+                            <img src="./ViberSmall.svg" alt="viber"/>
+                        </a>
+                        <a href="https://youtube.com/@tmaplot?si=vkx8v4U1JZhiXwl3" target="_blank"
+                           rel="noopener noreferrer">
+                            <img src="./youtubeS.svg" alt="youtube"/>
+                        </a>
                     </div>
                 </div>
             </div>

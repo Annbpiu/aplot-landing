@@ -24,7 +24,7 @@ function App() {
   return (
         <div className="overflow-hidden">
           <Header />
-                <main className="h-full">
+                <main className="h-full flex flex-col">
                     <Main />
                     <AboutCompany />
                     <NewStyle />

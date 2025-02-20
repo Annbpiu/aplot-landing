@@ -2,7 +2,7 @@ import ReactPlayer from "react-player";
 import { useRef, useState } from "react";
 
 const Player = () => {
-    const playerRef = useRef(null); // Видалено тип ReactPlayer
+    const playerRef = useRef(null);
     const [playing, setPlaying] = useState(true);
     const [muted, setMuted] = useState(true);
     const [progress, setProgress] = useState(0);
@@ -11,8 +11,20 @@ const Player = () => {
     const togglePlay = () => setPlaying(!playing);
     const toggleMute = () => setMuted(!muted);
 
-    const handleProgress = (state: { playedSeconds: number }) => {
+    // Оновлення прогресу
+    const handleProgress = (state) => {
         setProgress(state.playedSeconds);
+    };
+
+    // Обробник кліку по прогрес-бару
+    const handleSeek = (e) => {
+        if (!playerRef.current) return;
+        const bar = e.currentTarget;
+        const clickX = e.nativeEvent.offsetX;
+        const newTime = (clickX / bar.clientWidth) * duration;
+
+        playerRef.current.seekTo(newTime);
+        setProgress(newTime);
     };
 
     return (
@@ -35,51 +47,49 @@ const Player = () => {
                         </a>
                     </div>
                 </div>
+
                 {/* Відео */}
-                <ReactPlayer
-                    ref={playerRef}
-                    url="https://www.youtube.com/watch?v=OsdXs_dO9-8&t=1660s"
-                    playing={playing}
-                    loop
-                    muted={muted}
-                    width="100%"
-                    height="100%"
-                    onProgress={handleProgress}
-                    onDuration={setDuration}
-                    className="absolute top-0 left-0 w-full h-full z-10"
-                    style={{pointerEvents: "none"}}
-                />
+                <div className="absolute top-0 left-0 w-full h-full z-10 md:pointer-events-auto" onClick={togglePlay}>
+                    <ReactPlayer
+                        ref={playerRef}
+                        url="https://www.youtube.com/watch?v=OsdXs_dO9-8&t=1660s"
+                        playing={playing}
+                        loop
+                        muted={muted}
+                        width="100%"
+                        height="100%"
+                        onProgress={handleProgress}
+                        onDuration={setDuration}
+                        controls={false}
+                    />
+                </div>
+
 
                 {/* Контролери */}
-                <div className="absolute bottom-35 lg:bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-6 w-full max-w-md z-20">
+                <div className="absolute bottom-35 lg:bottom-10 left-1/2 transform -translate-x-1/2 flex items-center gap-6 w-full max-w-md z-20 cursor-pointer">
                     {playing ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white"
-                             onClick={togglePlay}>
-                            <path d="M19 19H5V5h14v14z"/>
+                        // Кнопка паузи
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={togglePlay}>
+                            <path d="M6 5h4v14H6zM14 5h4v14h-4z"/>
                         </svg>
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white"
-                             onClick={togglePlay}>
+                        // Кнопка відтворення
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white" onClick={togglePlay}>
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     )}
 
                     {muted ? (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white"
-                             onClick={toggleMute}>
-                            <path d="M12 3v18l-6-6h-3v-6h3l6-6z"/>
-                        </svg>
+                        <img src="./sound-off.svg" alt="sound-off" onClick={toggleMute} className="w-[38px] h-[38px] filter invert cursor-pointer"/>
                     ) : (
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="52" height="52" fill="white"
-                             onClick={toggleMute}>
-                            <path d="M16.5 12l-6 6v-12l6 6z"/>
-                        </svg>
+                        <img src="./sound-loud.svg" alt="sound-loud" onClick={toggleMute} className="w-[38px] h-[38px] filter invert cursor-pointer"/>
                     )}
 
-                    <div className="relative w-50 lg:w-full h-1 bg-gray-300">
+                    {/* Прогрес-бар */}
+                    <div className="relative w-50 lg:w-full h-1 bg-gray-300 cursor-pointer" onClick={handleSeek}>
                         <div
-                            className="absolute top-0 left-0 h-full bg-[#E50046]"
-                            style={{width: `${(progress / duration) * 100}%`}}
+                            className="absolute top-0 left-0 h-full bg-[#E50046] transition-all"
+                            style={{ width: `${(progress / duration) * 100}%` }}
                         ></div>
                     </div>
                 </div>
