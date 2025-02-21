@@ -12,7 +12,8 @@ export const ComplectationDoors = () => {
     const [selectedDoor, setSelectedDoor] = useState("Gold");
 
     return (
-        <div id="DoorComplectation" className="h-full flex flex-col justify-between min-h-screen w-full bg-white p-8 lg:px-30">
+        <div id="DoorComplectation"
+             className="h-full flex flex-col justify-between min-h-screen w-full bg-white p-8 lg:px-30">
             {/* Заголовок */}
             <h2 className="text-2xl md:text-5xl text-white mb-5 font-bold uppercase p-3 text-center bg-[#E50046]">
                 Комплектації дверей
@@ -55,39 +56,44 @@ export const ComplectationDoors = () => {
             </div>
 
             {/* Таблиця характеристик */}
-            <div className="relative overflow-x-hidden shadow-md sm:rounded-lg lg:py-10 lg:mt-6">
-                <table className="w-full text-sm text-left text-gray-500">
+            <div className="relative overflow-x-auto shadow-md sm:rounded-lg lg:py-10 lg:mt-6">
+                <table className="min-w-full text-sm text-left text-gray-500 table-fixed">
                     <thead className="text-xs text-gray-700 uppercase">
                     <tr>
-                        <th className="px-6 py-3 text-white text-base md:text-xl bg-[#E50046]">Характеристики:</th>
-                        <th className="px-6 py-3 text-white text-base md:text-xl bg-[#E50046]">{selectedDoor} Safe</th>
-                        <th className="px-6 py-3 text-white text-xl bg-[#E50046] hidden md:table-cell">{selectedDoor} C.P.R.</th>
-                        <th className="px-6 py-3 text-white text-xl bg-[#E50046] hidden md:table-cell">{selectedDoor} Ideal</th>
+                        <th className="px-6 py-3 text-white text-base md:text-xl bg-[#E50046] w-1/4">Характеристики:</th>
+                        <th className="px-6 py-3 text-white text-base md:text-xl bg-[#E50046] w-1/4 whitespace-nowrap">{selectedDoor} Safe</th>
+                        <th className="px-6 py-3 text-white text-xl bg-[#E50046] hidden md:table-cell w-1/4 whitespace-nowrap">{selectedDoor} C.P.R.</th>
+                        <th className="px-6 py-3 text-white text-xl bg-[#E50046] hidden md:table-cell w-1/4 whitespace-nowrap">{selectedDoor} Ideal</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 text-xl font-medium text-gray-900 bg-gray-50">Монтажна глибина рами
+                        <th className="px-6 py-4 text-xl font-medium text-gray-900 bg-gray-50 w-1/4">Монтажна глибина
+                            рами
                         </th>
-                        <td className="px-6 py-4 text-xl">120 мм</td>
-                        <td className="px-6 py-4 text-xl hidden md:table-cell">120 мм</td>
-                        <td className="px-6 py-4 text-xl hidden md:table-cell">120 мм</td>
+                        <td className="px-6 py-4 text-xl w-1/4">120 мм</td>
+                        <td className="px-6 py-4 text-xl hidden md:table-cell w-1/4">120 мм</td>
+                        <td className="px-6 py-4 text-xl hidden md:table-cell w-1/4">120 мм</td>
                     </tr>
                     <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 font-medium text-gray-900 bg-gray-50 text-xl">Товщина металу рами</th>
-                        <td className="px-6 py-4 text-xl">1,5 мм</td>
-                        <td className="px-6 py-4 text-xl hidden md:table-cell">1,5 мм</td>
-                        <td className="px-6 py-4 text-xl hidden md:table-cell">1,5 мм</td>
+                        <th className="px-6 py-4 font-medium text-gray-900 bg-gray-50 text-xl w-1/4">Товщина металу
+                            рами
+                        </th>
+                        <td className="px-6 py-4 text-xl w-1/4">1,5 мм</td>
+                        <td className="px-6 py-4 text-xl hidden md:table-cell w-1/4">1,5 мм</td>
+                        <td className="px-6 py-4 text-xl hidden md:table-cell w-1/4">1,5 мм</td>
                     </tr>
                     <tr className="border-b border-gray-200">
-                        <th className="px-6 py-4 font-medium text-gray-900 bg-gray-50 text-xl">Товщина полотна</th>
-                        <td className="px-6 py-4 text-xl">90 мм</td>
-                        <td className="px-6 py-4 text-xl hidden md:table-cell">90 мм</td>
-                        <td className="px-6 py-4 text-xl hidden md:table-cell">90 мм</td>
+                        <th className="px-6 py-4 font-medium text-gray-900 bg-gray-50 text-xl w-1/4">Товщина полотна
+                        </th>
+                        <td className="px-6 py-4 text-xl w-1/4">90 мм</td>
+                        <td className="px-6 py-4 text-xl hidden md:table-cell w-1/4">90 мм</td>
+                        <td className="px-6 py-4 text-xl hidden md:table-cell w-1/4">90 мм</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
+
         </div>
     );
 };

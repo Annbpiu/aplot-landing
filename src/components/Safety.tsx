@@ -20,7 +20,7 @@ export const Safety = () => {
 
             <div className="flex flex-col lg:flex-row md:gap-15 mt-10 px-6">
                 <div
-                    className="flex flex-col h-full bg-white/20 backdrop-blur-none mb-7 items-left justify-center p-7 w-full h-[190px] relative">
+                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none mb-7 items-left justify-center p-7 w-full h-[190px] relative">
                     <img
                         src="./check.svg"
                         alt="check"
@@ -33,7 +33,7 @@ export const Safety = () => {
                     </div>
                 </div>
                 <div
-                    className="flex flex-col h-full bg-white/20 backdrop-blur-none items-left justify-center mb-7 p-7 w-full h-[190px] relative">
+                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none items-left justify-center mb-7 p-7 w-full h-[190px] relative">
                     <img
                         src="./check.svg"
                         alt="check"
@@ -45,7 +45,7 @@ export const Safety = () => {
                     </div>
                 </div>
                 <div
-                    className="flex flex-col h-full bg-white/20 backdrop-blur-none items-left justify-center p-7 w-full h-[190px] relative">
+                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none items-left justify-center p-7 w-full h-[190px] relative">
                     <img
                         src="./check.svg"
                         alt="check"
