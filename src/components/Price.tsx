@@ -2,13 +2,13 @@ export const Price = () => {
     return (
         <div id="kvartira" className="min-h-screen h-full relative mt-5">
             <div className="absolute top-0 left-0 right-0 bottom-0 blur-sm md:hidden"
-                 style={{backgroundImage: 'url(./Panel-51.png)', backgroundSize: 'cover'}}>
+                 style={{backgroundImage: 'url(./Panel-51.webp)', backgroundSize: 'cover'}}>
             </div>
 
             <div
                 className="absolute top-0 left-0 right-0 bottom-0 hidden md:block"
                 style={{
-                    backgroundImage: 'url(./Panel-51.png)',
+                    backgroundImage: 'url(./Panel-51.webp)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat'
@@ -41,7 +41,7 @@ export const Price = () => {
             </div>
 
             <div className="relative z-10 bottom-0 h-[20%] md:hidden">
-                <img src="./Panel-51.png" alt="photo" className=""/>
+                <img src="./Panel-51.webp" alt="photo" className=""/>
             </div>
         </div>
     );
