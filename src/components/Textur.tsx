@@ -16,8 +16,7 @@ export const Textur = () => {
     };
 
     const openLightbox = (src) => {
-        // Отримуємо відповідне велике зображення за ключем
-        setLightboxImage(imagesBig[src] || src); // Якщо великого зображення немає, показуємо мале
+        setLightboxImage(imagesBig[src] || src);
         setIsLightboxOpen(true);
     };
 
