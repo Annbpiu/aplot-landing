@@ -40,19 +40,23 @@ export const ComplectationDoors = () => {
                 </div>
 
                 {/* Зображення дверей */}
-                <div className="lg:w-4/5 w-1/5 flex justify-end md:justify-center h-120 items-center">
-                    {doorOptions.map((door) => (
-                        <img
+                {doorOptions
+                    .filter((door) => window.innerWidth > 640 || selectedDoor === door.name) // Показує лише вибрану дверку на маленькому екрані
+                    .map((door) => (
+                        <div
                             key={door.name}
-                            src={door.img}
-                            alt={door.name}
-                            className={`xl:w-80 xl:h-80 lg:w-50 absolute lg:relative lg:h-50 md:w-50 md:h-80 h-75 w-50 object-contain transition-all xl:duration-300 mx-1 ${
-                                selectedDoor === door.name ? "scale-125 sm:opacity-100" : "scale-90 opacity-0 lg:opacity-100"
-                            }`}
-                        />
+                            className="lg:w-4/5 w-1/5 flex justify-end md:justify-center h-120 items-center cursor-pointer"
+                            onClick={() => setSelectedDoor(door.name)}
+                        >
+                            <img
+                                src={door.img}
+                                alt={door.name}
+                                className={`xl:w-80 xl:h-80 lg:w-50 absolute lg:relative lg:h-50 md:w-50 md:h-80 h-75 w-50 object-contain transition-all xl:duration-300 mx-1 ${
+                                    selectedDoor === door.name ? "scale-125 sm:opacity-100" : "scale-90 opacity-0 lg:opacity-100"
+                                }`}
+                            />
+                        </div>
                     ))}
-                </div>
-
             </div>
 
             {/* Таблиця характеристик */}
