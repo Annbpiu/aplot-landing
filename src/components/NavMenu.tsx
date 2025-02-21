@@ -8,7 +8,7 @@ export const NavMenu = () => {
                 {/* Логотипи */}
                 <div className="flex items-center md:gap-4">
                     <img src="./door_logo.svg" alt="Logo" className="w-10 h-10"/>
-                    <img src="./nav_logo.svg" alt="logo" className="w-20 h-20lg:w-35 lg:h-35"/>
+                    <img src="./nav_logo.svg" alt="logo" className="w-20 h-20 lg:w-35 lg:h-35"/>
                 </div>
 
                 {/* Адреса (показувати лише на великих екранах) */}
