@@ -4,7 +4,7 @@ import Player from "./Player";
 export const Header = () => {
     return (
         <div className="relative min-h-screen w-full">
-            <div className="relative w-full min-h-screen">
+            <div className="relative w-full h-screen">
                 <div className="absolute inset-0">
                     <Player/>
                 </div>
