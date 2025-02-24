@@ -33,7 +33,7 @@ export const NewStyle = () => {
 
                 {/* Слайдер */}
                 <div
-                    className="flex relative min-h-screen h-full pt-20 lg:pt-40"
+                    className="flex relative md:min-h-screen h-full pt-20 lg:pt-40"
                     style={{
                         width: `${images.length * (imageWidth + (window.innerWidth >= 768 ? 70 : 20))}px`, // Змінюємо spacing залежно від розміру екрану
                     }}
