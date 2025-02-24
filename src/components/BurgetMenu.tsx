@@ -83,7 +83,7 @@ export default function HamburgerMenu() {
 
             {/* Мобільне меню */}
             <div
-                className={`fixed inset-0 h-screen md:hidden bg-stone-800/90 backdrop-blur-sm z-50 flex flex-col items-end pr-5 justify-center space-y-6 ease-in transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`fixed inset-0 min-h-screen md:hidden bg-stone-800/90 backdrop-blur-sm z-50 flex flex-col items-end pr-5 justify-center space-y-6 ease-in transition-transform duration-300 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
             >
                 <div className="absolute bg-[#E50046] font-bold top-2 right-7 text-white"
                      onClick={() => setIsOpen(false)}>
