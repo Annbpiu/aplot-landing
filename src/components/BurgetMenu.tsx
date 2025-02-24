@@ -65,14 +65,14 @@ export default function HamburgerMenu() {
 
                 {/* Меню */}
                 <div
-                    className={`fixed top-0 right-0 h-full hidden md:block min-h-150 w-100 mt-20 bg-black/60 backdrop-blur-md shadow-lg bg-opacity-80 z-50 flex flex-col items-end pr-5 justify-center space-y-6 transition-all duration-500 ease-out lg:flex md:hidden
+                    className={`fixed top-0 right-0 h-full hidden md:block xl:min-h-150 lg:min-h-125 w-100 mt-20 bg-black/60 backdrop-blur-md shadow-lg bg-opacity-80 z-50 flex flex-col items-end pr-5 justify-center space-y-6 transition-all duration-500 ease-out lg:flex md:hidden
         ${isOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
                 >
                     {menuItems.map(({id, label}) => (
                         <a
                             key={id}
                             onClick={() => handleLinkClick(id)}
-                            className="!text-white relative cursor-pointer hover:bg-[#E50046]/80 pt-1 w-[90%] text-xl hover:text-gray-300 uppercase border-b-[#A5A5A4]/30 pb-1 border-b border-0"
+                            className="!text-white relative cursor-pointer hover:bg-[#E50046]/80 pt-1 w-[90%] xl:text-xl lg:text-sm hover:text-gray-300 uppercase border-b-[#A5A5A4]/30 pb-1 border-b border-0"
                         >
                             {label}
                         </a>

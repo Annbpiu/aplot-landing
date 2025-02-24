@@ -31,12 +31,12 @@ const Player = () => {
         <div>
             <div className="relative w-full h-screen overflow-hidden">
                 {/* Блок з фоном і текстом */}
-                <div className="bg-black/60 m-4 absolute p-2 mt-30 md:pl-10 md:h-125 md:ml-20 md:mt-40 md:w-180 z-20">
-                    <div className="p-2 md:p-10 relative z-30 text-white">
-                        <h1 className="font-bold !text-xl md:!text-5xl break-words">
+                <div className="bg-black/60 m-4 absolute p-2 mt-30 xl:pl-10 xl:h-125 xl:ml-20 xl:mt-40 lg:w-110 xl:w-180 z-20">
+                    <div className="p-2 xl:p-10 relative z-30 text-white">
+                        <h1 className="font-bold !text-xl lg:!text-xl xl:!text-5xl break-words">
                             Металеві двері від виробника №1 в Україні
                         </h1>
-                        <div className="mt-4 md:mt-10 font-light md:text-xl break-words">
+                        <div className="mt-4 md:mt-10 font-light lg:text-base xl:text-xl break-words">
                             Дизайн для будь-яких інтер’єрів та екстер’єрів. Інноваційне обладнання. Європейська якість
                         </div>
 

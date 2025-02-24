@@ -16,7 +16,7 @@ export const MetaleviDoors = () => {
             >
             </div>
 
-            <div className="bg-black/60 flex m-4 relative lg:ml-5 xl:ml-10 2xl:ml-70 md:pl-10 md:h-150 md:ml-20 md:mt-40 md:w-180">
+            <div className="bg-black/60 flex m-4 relative lg:ml-15 xl:ml-10 2xl:ml-70 md:pl-10 md:h-150 md:ml-10 xl:mt-40 md:w-180">
                 {/* Лінія зліва */}
                 <div className="absolute left-0 top-0 bottom-0 w-2 md:w-5  bg-[#E50046]"></div>
 

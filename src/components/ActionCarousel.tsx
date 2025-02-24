@@ -22,9 +22,9 @@ export const ActionCarousel = () => {
     }, []);
 
     return (
-        <div className="absolute bottom-80 right-40 p-4 md:w-1/2 w-full flex flex-col mr-5 justify-center items-center hidden lg:block">
+        <div className="relative self-center p-4 md:w-1/2 w-full items-end flex flex-col mr-5 justify-center items-center hidden lg:block">
             <div
-                className="flex justify-center mt-30 m-auto md:mb-40 relative"
+                className="flex flex-col justify-center mt-30 m-auto md:mb-40 relative"
                 style={{
                     width: `${images.length * (imageWidth + (window.innerWidth >= 768 ? 70 : 20))}px`,
                 }}
@@ -34,7 +34,7 @@ export const ActionCarousel = () => {
                         key={index}
                         src={src}
                         alt={`Diplom ${index + 1}`}
-                        className="w-64 md:w-60 xl:w-80 h-auto absolute cursor-pointer"
+                        className="w-64 xl:w-60 xl:w-80 h-auto absolute cursor-pointer"
                         style={{
                             left: `${index * (imageWidth + (window.innerWidth >= 768 ? 70 : 20))}px`,
                             zIndex: hoveredIndex === index ? 20 : index === currentIndex ? 10 : 0,

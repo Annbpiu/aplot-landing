@@ -4,7 +4,7 @@ export const NavMenu = () => {
     return (
         <div className="flex justify-center w-full">
             <nav
-                className="md:w-[80%] w-full max-w-[1200px] h-[50px] md:h-[78px] bg-black/60 backdrop-blur-sm shadow-lg p-6 flex justify-between items-center">
+                className="xl:w-[80%] w-full max-w-[1200px] h-[50px] md:h-[78px] bg-black/60 backdrop-blur-sm shadow-lg p-6 flex justify-between items-center">
                 {/* Логотипи */}
                 <div className="flex items-center md:gap-4">
                     <img src="./door_logo.svg" alt="Logo" className="w-10 h-10"/>
@@ -14,7 +14,7 @@ export const NavMenu = () => {
                 {/* Адреса (показувати лише на великих екранах) */}
                 <div className="hidden md:flex text-center text-white">
                     <img src="./location-marker.svg" alt="marker"/>
-                    <span className="block text-sm">Чернівецька обл., с.Великий Кучурів,<br/>вул. Головна 31-О</span>
+                    <span className="block text-sm lg:text-xs">Чернівецька обл., с.Великий Кучурів,<br/>вул. Головна 31-О</span>
                 </div>
 
                 {/* Соціальні мережі (приховуємо на малих екранах) */}
