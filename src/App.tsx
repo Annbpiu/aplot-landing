@@ -1,6 +1,6 @@
 import './App.scss'
 import { Header } from './components/Header'
-import Main from "./components/Main.tsx";
+import {Main} from "./components/Main.tsx";
 import AboutCompany from "./components/AboutCompany.tsx";
 import NewStyle from "./components/NewStyle.tsx";
 import MetaleviDoors from "./components/MetaleviDoors.tsx";
