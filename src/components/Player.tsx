@@ -31,19 +31,19 @@ const Player = () => {
         <div>
             <div className="relative w-full min-h-screen overflow-hidden">
                 {/* Блок з фоном і текстом */}
-                <div className="bg-black/60 m-4 absolute p-2 mt-30 xl:pl-10 xl:h-125 xl:ml-20 xl:mt-40 lg:w-110 xl:w-180 z-20">
+                <div className="bg-black/60 m-2 absolute p-1 mt-10 xl:pl-10 xl:h-125 xl:ml-20 xl:mt-40 lg:w-110 xl:w-180 z-20">
                     <div className="p-2 xl:p-10 relative z-30 text-white">
                         <a
                             href="https://aplot.ua/price1111.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#E50046] text-white py-4 px-8 mb-2 md:mb-13 text-sm md:text-2xl w-full md:w-[80%] font-bold hover:bg-[#d4003f] transition duration-300 inline-flex items-center justify-center space-x-4">
-                            <span className="text-white uppercase font-bold text-lg md:text-3xl">Асортимент</span>
+                            className="bg-[#E50046] text-white py-2 px-8 mb-2 md:mb-13 text-sm md:text-2xl w-full md:w-[80%] font-bold hover:bg-[#d4003f] transition duration-300 inline-flex items-center justify-center space-x-4">
+                            <span className="text-white uppercase font-bold text-base md:text-3xl">Асортимент</span>
                         </a>
-                        <h1 className="font-bold !text-xl lg:!text-xl xl:!text-5xl break-words">
+                        <h1 className="font-bold !text-base lg:!text-xl xl:!text-5xl break-words">
                             Металеві двері від виробника №1 в Україні
                         </h1>
-                        <div className="mt-4 md:mt-10 font-light lg:text-base xl:text-xl break-words">
+                        <div className="mt-2 md:mt-10 font-light text-sm lg:text-base xl:text-xl break-words">
                             Дизайн для будь-яких інтер’єрів та екстер’єрів. Інноваційне обладнання. Європейська якість
                         </div>
 
