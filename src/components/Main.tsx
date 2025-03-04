@@ -59,7 +59,7 @@ export const Main = () => {
                         <img
                             src={`./${photo}.jpg`}
                             alt="Door"
-                            className="transition-all duration-300 h-full max-w-60 object-cover ease-in-out transform group-hover:shadow-lg group-hover:scale-105"
+                            className="transition-all duration-300 max-h-120 md:h-full max-w-60 object-cover ease-in-out transform group-hover:shadow-lg group-hover:scale-105"
                         />
                     </div>
                 ))}
