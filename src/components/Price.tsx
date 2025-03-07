@@ -1,7 +1,7 @@
 export const Price = () => {
     return (
         <div id="kvartira" className="min-h-screen h-full relative mt-5">
-            <div className="absolute top-0 left-0 right-0 bottom-0 blur-sm md:hidden"
+            <div className="absolute top-0 left-0 min-h-screen right-0 bottom-0 blur-sm md:hidden"
                  style={{backgroundImage: 'url(./Panel-51.webp)', backgroundSize: 'cover'}}>
             </div>
 
@@ -16,7 +16,7 @@ export const Price = () => {
             >
             </div>
 
-            <div className="bg-black/60 m-4 relative p-2 md:pl-10 md:h-150 md:ml-20 md:mt-40 md:w-180">
+            <div className="bg-black/60 m-4 relative p-2 md:mb-10 md:pl-10 md:h-full md:ml-20 lg:mt-20 2xl:mt-40 md:w-180">
                 <div className="h-full p-2 md:p-10 relative z-10 text-white">
                     <h1 className="font-bold !text-xl md:!text-3xl break-words">
                         Двері в квартиру від виробника

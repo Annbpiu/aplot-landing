@@ -20,7 +20,7 @@ export const Safety = () => {
 
             <div className="flex flex-col lg:flex-row md:gap-15 mt-10 px-6">
                 <div
-                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none mb-7 items-left justify-center p-7 w-full xl:h-[190px] relative">
+                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none mb-7 items-left justify-center p-7 w-full xl:h-[220px] relative">
                     <img
                         src="./check.svg"
                         alt="check"
@@ -33,7 +33,7 @@ export const Safety = () => {
                     </div>
                 </div>
                 <div
-                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none items-left justify-center mb-7 p-7 w-full xl:h-[190px] relative">
+                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none items-left justify-center mb-7 p-7 w-full xl:h-[220px] relative">
                     <img
                         src="./check.svg"
                         alt="check"
@@ -45,16 +45,15 @@ export const Safety = () => {
                     </div>
                 </div>
                 <div
-                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none items-left justify-center p-7 w-full xl:h-[190px] relative">
+                    className="flex flex-col min-h-full bg-white/20 backdrop-blur-none items-left justify-center p-7 w-full xl:h-[220px] relative">
                     <img
                         src="./check.svg"
                         alt="check"
                         className="absolute top-[-25px] right-[-25px] w-15 h-15"
                     />
-                    <h2 className="text-white font-bold text-left mb-2">Лист не гнеться і не «ходить»</h2>
+                    <h2 className="text-white font-bold text-left mb-2">Протизламні італійські петлі</h2>
                     <div className="text-white text-left">
-                        завдяки тому, що ми використовуємо цільногнутий, оцинкований метал, пофарбований порошковою
-                        фарбою
+                        мають спеціальні штифти, що входять у гнізда рами та не дозволяють зняти двері навіть після зрізання
                     </div>
                 </div>
             </div>

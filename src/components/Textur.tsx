@@ -45,7 +45,7 @@ export const Textur = () => {
                 <h2 className="text-white break-words text-2xl md:text-4xl font-bold">Різноманіття текстур</h2>
             </div>
 
-            <div className="grid grid-cols-2 m-auto md:w-250 gap-6 md:mt-50 mt-12 md:grid-cols-2 lg:grid-cols-3 p-4 md:p-10">
+            <div className="grid grid-cols-2 m-auto md:w-250 gap-6 md:mt-10 md:mb-15 mt-12 md:grid-cols-2 lg:grid-cols-3 p-4 md:p-10">
                 {images.map((src, index) => (
                     <div
                         key={index}
@@ -74,7 +74,7 @@ export const Textur = () => {
                         <img
                             src={lightboxImage}
                             alt="Lightbox"
-                            className="max-w-[60%] max-h-[60%] m-auto lg:max-h-full lg:max-w-full object-contain"
+                            className="max-w-[65%] max-h-[65%] m-auto 2xl:max-h-full 2xl:max-w-full object-contain"
                         />
                     </div>
                 </div>
