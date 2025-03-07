@@ -31,7 +31,9 @@ const Player = () => {
         <div>
             <div className="relative w-full min-h-screen overflow-hidden">
                 {/* Блок з фоном і текстом */}
-                <div className="bg-black/60 m-2 absolute p-1 mt-10 xl:pl-10 xl:h-125 xl:ml-20 xl:mt-40 lg:w-110 xl:w-180 z-20">
+                <div
+                    className="bg-black/60 m-2 absolute p-1 mt-10 xl:pl-10 xl:h-100 2xl:h-125 xl:ml-20 xl:mt-20 2xl:mt-40 lg:w-110 xl:w-160 2xl:w-180 z-20"
+                >
                     <div className="p-2 xl:p-10 relative z-30 text-white">
                         <a
                             href="https://aplot.ua/price1111.pdf"
