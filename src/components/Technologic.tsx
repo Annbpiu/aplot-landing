@@ -1,6 +1,6 @@
 export const Technologic = () => {
     return (
-        <div id="technologic" className="min-h-[100dvh] bg-white p-2 mb-10 md:p-20">
+        <div id="technologic" className="min-h-[100svh] bg-white p-2 mb-10 md:p-20">
             <div className="pt-10">
                 <h2 className="text-2xl m-auto md:m-0 md:text-5xl text-white w-[95%] md:w-[85%] md:m-auto md:w-130 font-bold uppercase p-3 text-center bg-[#E50046]">
                     Технології виробництва

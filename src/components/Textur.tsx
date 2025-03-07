@@ -40,7 +40,7 @@ export const Textur = () => {
     }, [isLightboxOpen]);
 
     return (
-        <div className="min-h-[100dvh] pt-10" style={{ backgroundImage: 'url(./Decor_2.png)', backgroundSize: 'cover' }}>
+        <div className="min-h-[100svh] pt-10" style={{ backgroundImage: 'url(./Decor_2.png)', backgroundSize: 'cover' }}>
             <div className="bg-white/20 backdrop-blur-none text-center h-[80px] md:w-[80%] z-10 flex items-center justify-center relative top-1/5 left-1/2 transform -translate-x-1/2 md:-translate-y-1/5">
                 <h2 className="text-white break-words text-2xl md:text-4xl font-bold">Різноманіття текстур</h2>
             </div>

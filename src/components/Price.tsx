@@ -1,7 +1,7 @@
 export const Price = () => {
     return (
-        <div id="kvartira" className="min-h-[100dvh] h-full relative mt-5">
-            <div className="absolute top-0 left-0 min-h-[100dvh] right-0 bottom-0 blur-sm md:hidden"
+        <div id="kvartira" className="min-h-[100svh] h-full relative mt-5">
+            <div className="absolute top-0 left-0 min-h-[100svh] right-0 bottom-0 blur-sm md:hidden"
                  style={{backgroundImage: 'url(./Panel-51.webp)', backgroundSize: 'cover'}}>
             </div>
 

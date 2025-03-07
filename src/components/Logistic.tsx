@@ -2,7 +2,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export const Logistic = () => {
     return (
-        <div className="flex flex-col justify-center sm:h-full bg-white lg:p-25 min-h-[100dvh] p-5">
+        <div className="flex flex-col justify-center sm:h-full bg-white lg:p-25 min-h-[100svh] p-5">
             <h2 className="text-2xl md:text-5xl text-white mb-5 font-bold uppercase p-3 text-center bg-[#E50046]">
                 Налагоджена логістика
             </h2>

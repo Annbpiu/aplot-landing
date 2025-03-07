@@ -1,6 +1,6 @@
 export const Safety = () => {
     return (
-        <div className="flex flex-col min-h-[100dvh] p-5 lg:px-40 h-full">
+        <div className="flex flex-col min-h-[100svh] p-5 lg:px-40 h-full">
             <div
                 className="p-3 flex flex-col items-end right-0 w-full lg:px-10 h-[30%] border-t-[#E50046] border-0 lg:border-t-20 border-t-10"
                 style={{

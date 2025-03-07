@@ -20,7 +20,7 @@ export const Action = () => {
     }, []);
 
     return (
-        <div id="diploma" className="min-h-[100dvh] relative flex flex-col items-center lg:items-start justify-around gap-20" style={{
+        <div id="diploma" className="min-h-[100svh] relative flex flex-col items-center lg:items-start justify-around gap-20" style={{
             backgroundImage: 'url(./Decor_4.png), url(./Decor_1.png)',
             backgroundPosition: 'bottom right, top left',
             backgroundRepeat: 'no-repeat'
