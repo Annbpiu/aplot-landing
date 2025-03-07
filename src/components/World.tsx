@@ -9,7 +9,7 @@ export const World = () => {
             duration={1}
         >
             <div
-                className="flex flex-col sm:h-full pt-25 min-h-screen p-8 sm:p-20"
+                className="flex flex-col sm:h-full pt-25 min-h-[100dvh] p-8 sm:p-20"
                 style={{
                     backgroundImage: "url(./map.svg)",
                     backgroundSize: "contain",

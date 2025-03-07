@@ -115,10 +115,11 @@ export const Main = () => {
                             {/* Зображення */}
                             <div className="relative w-full h-auto overflow-hidden">
                                 <img
+                                    key={currentImage} // Додаємо key, щоб React правильно оновлював картинку
                                     src={`./${photos[currentImage]}.jpg`}
                                     alt={`Door ${currentImage}`}
-                                    className="w-full h-auto max-h-[80vh] object-contain transition-all duration-500 ease-in-out"
-                                    style={{ transition: 'transform 0.5s ease-in-out' }}
+                                    className="w-full h-auto max-h-[80vh] object-contain transition-opacity duration-500 ease-in-out opacity-0"
+                                    style={{ animation: 'fadeIn 0.5s forwards' }}
                                 />
                             </div>
 

@@ -29,7 +29,7 @@ const Player = () => {
 
     return (
         <div>
-            <div className="relative w-full min-h-screen overflow-hidden">
+            <div className="relative w-full min-h-[100dvh] overflow-hidden">
                 {/* Блок з фоном і текстом */}
                 <div
                     className="bg-black/60 m-2 absolute p-1 mt-10 xl:pl-10 xl:h-100 2xl:h-125 xl:ml-20 xl:mt-20 2xl:mt-40 lg:w-110 xl:w-160 2xl:w-180 z-20"

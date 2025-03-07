@@ -1,6 +1,6 @@
 export const Combination = () => {
     return (
-        <div className="min-h-screen h-full relative flex">
+        <div className="min-h-[100dvh] h-full relative flex">
             <div className="absolute top-0 left-0 right-0 bottom-0 blur-sm md:hidden"
                  style={{backgroundImage: 'url(./Group46.png)', backgroundSize: 'cover'}}>
             </div>
